@@ -451,6 +451,9 @@ body {
     aspect-ratio: unset;
     height: calc(100vw * 1.3125); /* 75vw(画像4:3) + 56.25vw(テキスト3倍) */
   }
+  #image-area {
+    height: 75vw; /* 明示的に指定してキャラ画像のheight:85%を正しく計算させる */
+  }
   #textbox {
     height: 56.25vw; /* 元の25%の3倍 */
   }
