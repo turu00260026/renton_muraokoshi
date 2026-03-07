@@ -445,16 +445,11 @@ body {
 #btn-retry:hover { background: #3a5faa; }
 
 /* ===== モバイル（縦長画面） ===== */
-/* 画像は元サイズ（幅100vw × 4:3高さ）を維持し、
-   テキストボックスをその下に3倍サイズで追加 */
+/* ゲーム全体を縦に伸ばし、画像サイズはそのまま、テキストを3倍に */
 @media (max-width: 767px) {
   #game {
     aspect-ratio: unset;
-    height: calc(100vw * 1.3125); /* 75vw(画像) + 56.25vw(テキスト3倍) */
-  }
-  #image-area {
-    flex: none;
-    height: 75vw; /* 幅100vwの4:3 */
+    height: calc(100vw * 1.3125); /* 75vw(画像4:3) + 56.25vw(テキスト3倍) */
   }
   #textbox {
     height: 56.25vw; /* 元の25%の3倍 */
