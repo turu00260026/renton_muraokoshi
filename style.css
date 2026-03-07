@@ -26,6 +26,13 @@ body {
   }
 }
 
+/* モバイル：テキストボックスを3倍の高さに */
+@media (max-width: 767px) {
+  #textbox, #choice-box {
+    height: 75%;
+  }
+}
+
 .hidden { display: none !important; }
 
 /* ===== タイトル画面 ===== */
