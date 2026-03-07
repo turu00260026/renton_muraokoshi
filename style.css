@@ -26,12 +26,6 @@ body {
   }
 }
 
-/* モバイル：テキストボックスを3倍の高さに */
-@media (max-width: 767px) {
-  #textbox, #choice-box {
-    height: 75%;
-  }
-}
 
 .hidden { display: none !important; }
 
@@ -265,7 +259,7 @@ body {
   flex: 1;
   min-height: 0;
   overflow-y: auto;
-  padding: 14px 24px 8px;
+  padding: 14px 24px 44px;
 }
 #speaker-name {
   display: inline-block;
@@ -449,3 +443,10 @@ body {
   transition: background 0.2s;
 }
 #btn-retry:hover { background: #3a5faa; }
+
+/* モバイル：テキストボックスを3倍の高さに */
+@media (max-width: 767px) {
+  #textbox, #choice-box {
+    height: 75%;
+  }
+}
