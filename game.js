@@ -245,8 +245,8 @@ function showEnding() {
   // キャラ差分・背景
   const isTrue = key.endsWith('_true');
   const isBad  = key.endsWith('_bad');
-  el.endingCharaL.src = isTrue ? '../chara/renton_smile.png' : isBad ? '../chara/renton_sad.png' : '../chara/renton_nomal.png';
-  el.endingCharaR.src = isTrue ? '../chara/gen_smile.png' : '../chara/gen_nomal.png';
+  el.endingCharaL.src = isTrue ? 'chara/renton_smile.png' : isBad ? 'chara/renton_sad.png' : 'chara/renton_nomal.png';
+  el.endingCharaR.src = isTrue ? 'chara/gen_smile.png' : 'chara/gen_nomal.png';
   const bgFile = isTrue ? 'haikei/true_end.jpeg' : isBad ? 'haikei/bad_end.jpeg' : 'haikei/nomal_end.jpeg';
   document.getElementById('ending-bg').style.backgroundImage = `url('${bgFile}')`;
 }
