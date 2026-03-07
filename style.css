@@ -444,9 +444,22 @@ body {
 }
 #btn-retry:hover { background: #3a5faa; }
 
-/* モバイル：テキストボックスを3倍の高さに */
+/* ===== モバイル（縦長画面） ===== */
+/* 画像は元サイズ（幅100vw × 4:3高さ）を維持し、
+   テキストボックスをその下に3倍サイズで追加 */
 @media (max-width: 767px) {
-  #textbox, #choice-box {
-    height: 75%;
+  #game {
+    aspect-ratio: unset;
+    height: calc(100vw * 1.3125); /* 75vw(画像) + 56.25vw(テキスト3倍) */
+  }
+  #image-area {
+    flex: none;
+    height: 75vw; /* 幅100vwの4:3 */
+  }
+  #textbox {
+    height: 56.25vw; /* 元の25%の3倍 */
+  }
+  #choice-box {
+    height: 56.25vw;
   }
 }
