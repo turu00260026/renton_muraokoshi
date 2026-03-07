@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>れんとん異世界村おこし大作戦～おもちが消えた村～</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game">
+
+    <!-- BGM切り替えボタン＆音量スライダー（常時表示） -->
+    <div id="bgm-controls">
+      <button id="bgm-toggle" title="BGM ON/OFF">🔊</button>
+      <input id="bgm-volume" type="range" min="0" max="100" value="23" title="音量">
+    </div>
+
+    <!-- タイトル画面 -->
+    <div id="title-screen">
+      <div id="title-text-block">
+        <h1 id="title-main">れんとん異世界村おこし大作戦</h1>
+        <h2 id="title-sub">～おもちが消えた村～</h2>
+      </div>
+      <img src="haikei/top.jpeg" alt="タイトル" id="title-img">
+      <button id="start-btn">は じ め る</button>
+      <p id="bgm-notice">🔊 BGMが流れます。音量にご注意ください</p>
+    </div>
+
+    <!-- ゲーム画面 -->
+    <div id="game-screen" class="hidden">
+
+      <!-- 画像エリア（背景＋キャラ＋オーバーレイUI） -->
+      <div id="image-area">
+
+        <div id="bg-layer">
+          <img id="bg-img" src="" alt="">
+        </div>
+
+        <div id="chara-layer">
+          <img id="chara-img" src="" alt="" class="hidden">
+        </div>
+
+        <!-- ステータスバー -->
+        <div id="status-bar">
+          <div class="stat-item">
+            <span class="stat-label">信頼度</span>
+            <div class="bar-track"><div id="bar-T" class="bar-fill bar-trust"></div></div>
+            <span id="num-T" class="stat-num">0</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">資金</span>
+            <div class="bar-track"><div id="bar-F" class="bar-fill bar-fund"></div></div>
+            <span id="num-F" class="stat-num">0</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">知名度</span>
+            <div class="bar-track"><div id="bar-N" class="bar-fill bar-fame"></div></div>
+            <span id="num-N" class="stat-num">0</span>
+          </div>
+        </div>
+
+        <!-- 章タイトルカード -->
+        <div id="chapter-card" class="hidden">
+          <div id="chapter-num"></div>
+          <div id="chapter-title"></div>
+        </div>
+
+
+      </div>
+
+      <!-- テキストエリア（画像の下） -->
+      <div id="textbox">
+        <div id="text-scroll">
+          <div id="speaker-name"></div>
+          <div id="text-content"></div>
+        </div>
+        <button id="next-btn" class="hidden">次へ ▶</button>
+        <button id="back-btn" class="hidden">◄ 戻る</button>
+      </div>
+
+      <!-- 選択肢エリア（テキストエリアと排他） -->
+      <div id="choice-box" class="hidden">
+        <div id="choice-prompt"></div>
+        <div id="choice-list"></div>
+      </div>
+
+    </div>
+
+    <!-- エンディング画面 -->
+    <div id="ending-screen" class="hidden">
+      <div id="ending-bg"></div>
+      <img id="ending-chara-l" src="" alt="">
+      <img id="ending-chara-r" src="" alt="">
+      <div id="ending-panel">
+        <div id="ending-badge"></div>
+        <div id="ending-title"></div>
+        <div id="ending-text"></div>
+        <div id="ending-score"></div>
+        <button id="btn-retry">最初からプレイする</button>
+      </div>
+    </div>
+
+  </div>
+  <script src="scenario.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
